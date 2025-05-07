@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: webrise
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/db_postgres?useUnicode=yes&characterEncoding=UTF-8&serverTimezone=Europe/Moscow
+    username: root
+    password: root
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          time_zone: Europe/Moscow
+
+logging:
+  level:
+    root: INFO
+    com.leklyus.spring.springboot.microsproject: DEBUG
+
